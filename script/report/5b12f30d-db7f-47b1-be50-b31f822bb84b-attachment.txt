@@ -1,0 +1,1 @@
+WARNING  urllib3.connectionpool:connectionpool.py:874 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /wd/hub/session/c70d616b-c554-484c-bdae-1ce4bc70e254/window

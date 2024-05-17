@@ -1,7 +1,13 @@
 import os
 
-# 项目url地址
-BASE_URL = "http://kdtx-test.itheima.net"
+# 连接真机的desired_capabilities字典信息
+PLATFORM_NAME = "Android"
+PLATFORM_VERSION = "13"
+DEVICE_NAME = "REAL_ME"
+APP_PACKAGE = "cn.TuHu.android"
+APP_ACTIVITY = "cn.TuHu.Activity.Welcome"
+NO_RESET = True
+APPIUM_SERVER_URL = "http://localhost:4723/wd/hub"
 
 # 项目根目录路径
 BASE_PATH = os.path.dirname(__file__)
@@ -15,7 +21,6 @@ MYSQL_PORT = 3306
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "123456"
 
-# 登陆账号/密码/验证码
+# APP登陆账号/密码/验证码
 USERNAME = "admin"
 PASSWORD = "HM_2023_test"
-VERIFY_CODE = 2

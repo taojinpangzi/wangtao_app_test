@@ -20,21 +20,37 @@ class Operation:
     def quit_driver(self):
         self.driver.quit()
 
-    # 显示等待
     def explicit_wait_xpath(self, location, timeout=10) -> WebElement:
         """
-        :param location: 元素定位
-        :param timeout: 显示等待的超时时间
-        :return: 显示等待的元素
+        通过xpath 显式等待
+        :param location: xpath
+        :param timeout: 显示式等待的超时时间
+        :return: 显式等待的元素
         """
         return (WebDriverWait(self.driver, timeout, 0.1).
                 until(lambda x: x.find_element(AppiumBy.XPATH, location)))
 
     def tap_xpath(self, location):
+        """
+        通过xpath 轻敲
+        :param location: xpath
+        :return: None
+        """
         TouchAction(self.driver).tap(self.driver.find_element(AppiumBy.XPATH, location)).perform()
 
     def tap_coordinate(self, x_coordinate, y_coordinate):
+        """
+        通过坐标 轻敲
+        :param x_coordinate: x坐标
+        :param y_coordinate: y坐标
+        :return: None
+        """
         TouchAction(self.driver).tap(x=x_coordinate, y=y_coordinate).perform()
 
     def click_xpath(self, location):
+        """
+        通过xpath 单击
+        :param location: xpath
+        :return: None
+        """
         self.driver.find_element(AppiumBy.XPATH, location).click()

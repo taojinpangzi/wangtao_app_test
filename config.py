@@ -1,6 +1,6 @@
 import os
 
-# 连接真机的desired_capabilities字典信息
+# 连接真机/模拟器的desired_capabilities字典信息
 PLATFORM_NAME = "Android"
 PLATFORM_VERSION = "13"
 DEVICE_NAME = "REAL_ME"

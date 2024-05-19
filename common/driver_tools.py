@@ -7,6 +7,12 @@ class DriverTools:
 
     @classmethod
     def get_driver(cls):
+        """
+        初始化driver，这里是同一个driver对象可以在两个页面类中可以保持的关键：
+        举例：第一个页面类时，初始化driver，第一个页面类完成后，进入第二个页面类，此时
+        cls.__driver is not None，进入else判断，使用前面的driver，而不用初始化
+        :return:
+        """
         if cls.__driver is None:
             __desired_capabilities = dict()
             __desired_capabilities['platformName'] = PLATFORM_NAME
@@ -16,6 +22,8 @@ class DriverTools:
             __desired_capabilities['appActivity'] = APP_ACTIVITY
             __desired_capabilities['noReset'] = NO_RESET
             cls.__driver = webdriver.Remote(APPIUM_SERVER_URL, __desired_capabilities)
+            return cls.__driver
+        else:
             return cls.__driver
 
     @classmethod

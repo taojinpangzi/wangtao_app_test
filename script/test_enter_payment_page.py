@@ -2,7 +2,7 @@ import time
 from page.home_page import *
 
 
-class TestTuHu:
+class TestEnterPaymentPage:
     def setup_class(self):
         self.home_page = HomePage()
 

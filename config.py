@@ -3,9 +3,9 @@ import os
 # 连接真机/模拟器的desired_capabilities字典信息
 PLATFORM_NAME = "Android"
 PLATFORM_VERSION = "13"
-DEVICE_NAME = "REAL_ME"
-APP_PACKAGE = "cn.TuHu.android"
-APP_ACTIVITY = "cn.TuHu.Activity.Welcome"
+DEVICE_NAME = "192.168.31.111:5555"
+APP_PACKAGE = "com.jingdong.app.mall"
+APP_ACTIVITY = ".main.MainActivity"
 NO_RESET = True
 APPIUM_SERVER_URL = "http://localhost:4723/wd/hub"
 

@@ -23,3 +23,8 @@ class DriverTools:
         if cls.__driver:
             cls.__driver.quit()
             cls.__driver = None
+
+
+if __name__ == '__main__':
+    driver = DriverTools.get_driver()
+    DriverTools.quit_driver()
